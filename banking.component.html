@@ -1,0 +1,27 @@
+<body>
+    <form [formGroup]="bankform">
+    <h2>Bank Search Application</h2>
+    <select class="dropdown">
+        <option (click)="bengaluru(data)">BENGALURU</option>
+        <option (click)="mumbai(data)">MUMBAI</option>
+        <option (click)="chennai(data)">DELHI</option>
+        <option (click)="delhi(data)">KOLKATA</option>
+        <option (click)="pune(data)">CUTTACK</option>
+    </select>
+    <h4 style="float: left;">List of Banks in BENGALURU</h4>
+    <table class="headings">
+        <tr>
+            <th>ACTIONS</th>
+            <th>BANK NAME</th>
+            <th>IFSC</th>
+            <th>BANK ID</th>
+            <th>BRANCH</th>
+        </tr>
+        <tr *ngFor = "let body of bengaluru">
+            <th>{{bankname.data}}</th>
+            <th>{{ifsc.data}}</th>
+            <th>{{branch.data}}</th>
+        </tr>
+    </table>
+    </form>
+</body>
